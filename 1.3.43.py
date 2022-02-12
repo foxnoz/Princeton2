@@ -14,34 +14,34 @@ n = int(sys.argv[1])
 # For each a, b, c, d, check whether a^4 + b^4 = c^4 + d^4.
 for a in range(1, n+1):
     a5 = a*a*a*a*a
-    stdio.writeln(str('a5')+'='+str(a5))
+    #stdio.writeln(str('a5')+'='+str(a5))
     if a5 > n:
         break
 
     # Start at a to avoid print out duplicate.
     for b in range(1, n+1):
         b5 = b*b*b*b*b
-        stdio.writeln(str('b5')+'='+str(b5))
+        #stdio.writeln(str('b5')+'='+str(b5))
         if b5 > n:
             break;
 
         # Start at a + 1 to avoid printing out duplicates.
         for c in range(1, n+1):
             c5 = c*c*c*c*c
-            stdio.writeln(str('c5')+'='+str(c5))
+            #stdio.writeln(str('c5')+'='+str(c5))
             if c5 > n:
                 break
 
             # Start at c to avoid printing out duplicates.
             for d in range(1, n+1):
                 d5 = d*d*d*d*d
-                stdio.writeln(str('d5')+'='+str(d5))
+                #stdio.writeln(str('d5')+'='+str(d5))
                 if d5 > n:
                     break
 
                 for e in range(1, n+1):
             	     e5 = e*e*e*e*e
-            	     stdio.writeln(str('e5')+'='+str(e5))
+            	     #stdio.writeln(str('e5')+'='+str(e5))
             	     if e5 > n:
             	         break
                     

@@ -5,27 +5,27 @@
 import stdio
 import sys
 
-# Accept as a command-line argument an integer n which is the first 9
-# digits of an ISBN. Compute the final digit, and write the complete
-# ISBN to standard output.
+# Принять в качестве аргумента командной строки целое число n, которое является первым 9
+# цифры ISBN. Вычислите последнюю цифру и запишите полный
+# ISBN для стандартного вывода.
 #
-# An ISBN is legal if it consists of 10 digits and
-#    d1 + 2*d2 + 3*d3 + ... + 10*d10
-# is a multiple of 11. For example, 0-201-31452-5 is legal since
-#    1*5 + 2*2 + 3*5 + 4*4 + 5*1 + 6*3 + 7*1 + 8*0 + 9*2 + 10*0 = 88
-# and 88 is a multiple of 11.
+# ISBN является законным, если он состоит из 10 цифр и
+# d1 + 2*d2 + 3*d3 + ... + 10*d10
+# кратно 11. Например, 0-201-31452-5 является законным, так как
+# 1*5 + 2*2 + 3*5 + 4*4 + 5*1 + 6*3 + 7*1 + 8*0 + 9*2 + 10*0 = 88
+# и 88 кратно 11.
 
-# Accept a command-line argument.
+# Принять аргумент командной строки.
 n = int(sys.argv[1])
 
-# Compute the weighted sum of the digits, from right to left.
+# Вычислите взвешенную сумму цифр справа налево.
 total = 0
 for i in range(2, 11):
-    digit = n % 10;   # rightmost digit
+    digit = n % 10;   # крайняя правая цифра
     total += i * digit
     n //= 10
 
-# Write check digit; use X for 10.
+# Напишите контрольную цифру; используйте X для 10.
 stdio.write('The full ISBN number is ' + sys.argv[1])
 if total % 11 == 1:
    stdio.writeln('X')

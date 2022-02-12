@@ -28,9 +28,9 @@ for a in range(1, n+1):
 
                 if a2 + b2 + c2 == d2:
                     i+=1
-                    #stdio.write(str(d) + '^2 '+' = ')
-                    #stdio.write(str(a) + '^2 + ' + str(b) + '^2 + ' + str(c) + '^2')
-                    #stdio.writeln()
+                    stdio.write(str(d) + '^2 '+' = ')
+                    stdio.write(str(a) + '^2 + ' + str(b) + '^2 + ' + str(c) + '^2')
+                    stdio.writeln()
 stdio.writeln('количество комбинаций =' + str(i)) 
 t1 = perf_counter()
 stdio.write('время выполнения = ')

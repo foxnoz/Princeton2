@@ -18,35 +18,35 @@ n = int(sys. argv[1])
 # Для каждого a, b, c, d проверьте, является ли a^3 + b^3 = c^3 + d^3.
 a = 1
 while a <= n:
-    a3 = a*a*a
-    if a3 > n:
+    a4 = a*a*a*a
+    if a4 > n:
         break
 
     # Начните с а, чтобы избежать распечатки дубликата.
     b = a
     while b <= n:
-        b3 = b*b*b
-        if a3 + b3 > n:
+        b4 = b*b*b*b
+        if a4 + b4 > n:
             break;
 
         # Начните с a + 1, чтобы избежать печати дубликатов.
         c = a+1
         while c <= n:
-            c3 = c*c*c
-            if c3 > a3 + b3:
+            c4 = c*c*c*c
+            if c4 > a4 + b4:
                 break
 
             # Начните с c, чтобы избежать печати дубликатов.
             d = c
             while d <= n:
-                d3 = d*d*d
-                if c3 + d3 > a3 + b3:
+                d4 = d*d*d*d
+                if c4 + d4 > a4 + b4:
                     break
 
-                if c3 + d3 == a3 + b3:
-                    stdio.write(str(a3+b3) + ' = ')
-                    stdio.write(str(a) + '^3 + ' + str(b) + '^3 = ')
-                    stdio.write(str(c) + '^3 + ' + str(d) + '^3')
+                if c4 + d4 == a4 + b4:
+                    stdio.write(str(a4+b4) + ' = ')
+                    stdio.write(str(a) + '^4 + ' + str(b) + '^4 = ')
+                    stdio.write(str(c) + '^4 + ' + str(d) + '^4')
                     stdio.writeln()
                 d += 1
             c += 1

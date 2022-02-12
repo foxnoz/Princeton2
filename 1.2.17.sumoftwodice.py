@@ -1,10 +1,10 @@
 import stdio
 import random
-
+import sys
 # Roll two six-sided dice, and write the resulting sum to standard
 # output.
 
-SIDES = 6
+SIDES = int(sys.argv[1])
 
 a = random.randrange(1, SIDES+1)
 b = random.randrange(1, SIDES+1)

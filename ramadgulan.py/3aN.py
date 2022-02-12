@@ -1,14 +1,6 @@
 import stdio
 import sys
     
-# Accept integer n as a command-line argument. Write to standard
-# output any integer between 1 and n that can be expressed as the
-# sum of two cubes in two (or more) different ways.
-#
-# Bug: If a number can be expressed as a sum of cubes in more than two
-# different ways, the program writes some duplicates.
-
-# Accept one command-line argument
 n = int(sys.argv[1])
 k = int(sys.argv[2])
 i=0
@@ -18,14 +10,12 @@ for a in range(1, n+1):
     if a2 > n:
         break
 
-    # Start at a to avoid print out duplicate.
     for b in range(a, n+1):
         b2 = b**k
         
         if b2 > n:
             break
 
-        # Start at a + 1 to avoid printing out duplicates.
         for c in range(b, n+1):
             c2 = c**k
             if c2 > n:

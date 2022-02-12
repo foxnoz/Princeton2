@@ -6,23 +6,12 @@
 
 import stdio
 import sys
-
-n = int(sys.argv[1])
-
-# Reverse using arithmetic.
-m = 0
-while n != 0:
-    m = (10 * m) + (n % 10);
-    n //= 10
-stdio.writeln(m)
-
-# Just for fun, reverse again using string concatenation.
-s = ''
-while m != 0:
-    digit = m % 10
-    s += str(digit)
-    m //= 10
-stdio.writeln(s)
+f=0
+g=1
+for i in range(16):
+    stdio.writeln(f)
+    f=f+g
+    g=f-g
 
 #-----------------------------------------------------------------------
 

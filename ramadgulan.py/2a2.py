@@ -1,15 +1,7 @@
 import stdio
 import sys
 from time import perf_counter  
-# Accept integer n as a command-line argument. Write to standard
-# output any integer between 1 and n that can be expressed as the
-# sum of two cubes in two (or more) different ways.
-#
-# Bug: If a number can be expressed as a sum of cubes in more than two
-# different ways, the program writes some duplicates.
 
-# Accept one command-line argument
-#current = time.localtime(time.time())
 t0 = perf_counter()
 n = int(sys.argv[1])
 i=0
